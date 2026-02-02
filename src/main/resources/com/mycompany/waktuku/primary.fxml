@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+
+<VBox alignment="CENTER" spacing="15"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.waktuku.DashboardController">
+
+    <HBox spacing="10">
+        <Label text="Session #" />
+        <Label fx:id="sessionLabel" text="1"/>
+        <Button text="+ New" onAction="#newSession"/>
+    </HBox>
+
+    <Label fx:id="focusScoreLabel" text="0% Focus"/>
+    <ProgressBar fx:id="focusBar" prefWidth="250"/>
+
+    <Button text="Start Focus" onAction="#startFocus"/>
+
+</VBox>

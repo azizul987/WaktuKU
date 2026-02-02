@@ -1,0 +1,13 @@
+.root {
+    /* -fx-background-color: red; */
+    
+}
+
+.Title{
+     -fx-font-size: 42px;
+}
+.timerLabel{
+    -fx-text-fill:black;
+    -fx-font-size: 64px; 
+}
+
