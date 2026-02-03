@@ -6,6 +6,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.Parent;;
 
 public class DashboardController {
 
@@ -16,6 +17,7 @@ public class DashboardController {
     private int session = 1;
     private Stage focusStage = null;
 
+    private static Scene scene;
     @FXML
     public void newSession() {
         session++;
@@ -34,8 +36,11 @@ public class DashboardController {
         sessionLabel.setText(String.valueOf(session));
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
+        Parent root=loader.load();
         focusStage  = new Stage();
-        focusStage.setScene(new Scene(loader.load(), 260, 160));
+        scene =new Scene(root,260,160);
+        scene.getStylesheets().add(App.class.getResource("style.css").toExternalForm());
+        focusStage.setScene(scene);
         focusStage.setAlwaysOnTop(true);
         focusStage.setResizable(false);
         focusStage.show();

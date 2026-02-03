@@ -1,5 +1,6 @@
 package com.mycompany.waktuku.util;
 
+import java.nio.file.Path;
 import java.sql.*;
 
 public class DatabaseHelper {
@@ -33,6 +34,11 @@ public class DatabaseHelper {
                 FOREIGN KEY(session_id) REFERENCES pomodoro_session(id)
             );
         """;
+        String Change_Backround="""
+                Create Tabel If Not EXISTS Backround(
+                Path Text ;
+                );
+                """;
 
         try (Connection conn = connect();
              Statement stmt = conn.createStatement()) {

@@ -11,15 +11,15 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.mycompany.waktuku.DashboardController">
 
-    <HBox spacing="10">
-        <Label text="Session #" />
+    <VBox spacing="10" alignment="CENTER">
+      <HBox alignment="CENTER">
+        <Label text="Session : " />
         <Label fx:id="sessionLabel" text="1"/>
-        <Button text="+ New" onAction="#newSession"/>
-    </HBox>
+      </HBox>
+        <Button text="+ New" onAction="#newSession" onAction="#stopFocus"/>
+    </VBox>
 
     <Label fx:id="focusScoreLabel" text="0% Focus"/>
     <ProgressBar fx:id="focusBar" prefWidth="250"/>
-
-    <Button text="Start Focus" onAction="#startFocus"/>
 
 </VBox>

@@ -10,6 +10,6 @@
       fx:controller="com.mycompany.waktuku.FocusController">
 
     <Label fx:id="timerLabel" text="25:00" style="-fx-font-size: 32"/>
-    <Button text="Stop" onAction="#stopFocus"/>
+    <Button text="Stop" onAction="#stopFocus"  styleClass="Stop"/>
 
 </VBox>
